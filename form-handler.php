@@ -4,7 +4,7 @@ $visitor_email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-$email_from = 'git@ayangnovaanggraeni.github.io/uas/';
+$email_from = 'git@ayangnovaanggraeni.github.io';
 
 $email_subject = 'New FormSubmission';
 
@@ -19,7 +19,7 @@ $headers = "From: $email_from \r\n";
 
 $headers .= "Reply-To: $visitor_email \r\n";
 
-sendmail($to,$email_subject,$email_body,$headers);
+mail($to,$email_subject,$email_body,$headers);
 
 header("Location: contact.html");
 ?> 
